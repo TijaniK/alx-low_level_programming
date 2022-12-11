@@ -7,16 +7,19 @@
  */
 int main(void)
 {
-	char i;
-	
-	for (i = '0' ; i <= '9' ; i++)
+	int num;
+
+	for (num = 0; num <= 9; num++)
 	{
-		putchar(i);
-		if (i == '9')
+		putchar((num % 10) + '0');
+		if (num == 9)
 			continue;
-        putchar(',');
-	putchar(' ');
+		
+		putchar(',');
+		putchar(' ');
 	}
+
 	putchar('\n');
+
 	return (0);
 }
